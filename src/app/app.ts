@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar';
+import { Footer } from './footer/footer';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet , NavbarComponent, Footer],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -10,3 +12,4 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('timepass');
 }
+

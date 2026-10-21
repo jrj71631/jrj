@@ -1,0 +1,24 @@
+
+<nav class="navbar">
+  <a href="#home" class="logo">
+    <span class="logo-icon">&lt;/&gt;</span>
+    Dev<span class="highlight">Portfolio</span>
+  </a>
+
+  <button class="menu-toggle" (click)="toggleMenu()"
+          [attr.aria-expanded]="isMenuOpen"
+          aria-label="Toggle navigation">
+    {{ isMenuOpen ? '✕' : '☰' }}
+  </button>
+
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a href="#home" (click)="closeMenu()">Home</a></li>
+    <li><a href="#about" (click)="closeMenu()">About</a></li>
+    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+  </ul>
+
+  <a href="#contact" class="hire-btn">Hire Me <span>↗</span></a>
+</nav>
+
