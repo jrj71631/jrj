@@ -1,0 +1,168 @@
+
+.about-section {
+  padding: 80px 0;
+  color: #f3f4f8;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: #a99cff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-section > .container > h1 {
+  margin: 12px 0 40px;
+  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: -2px;
+}
+
+.about-section > .container > h1 span {
+  color: #a99cff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.about-card {
+  padding: 32px 25px;
+  text-align: center;
+  border: 1px solid #292d3a;
+  border-radius: 18px;
+  background: #131620;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #a99cff, #5946b8);
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-card h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.role {
+  color: #a99cff;
+  font-size: 14px;
+}
+
+.line {
+  height: 1px;
+  margin: 24px 0;
+  background: #292d3a;
+}
+
+.description {
+  color: #a7adbd;
+  line-height: 1.8;
+}
+
+.about-content h2 {
+  margin: 0 0 20px;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.35;
+}
+
+.about-content > p {
+  color: #a7adbd;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.about-content h3 {
+  margin-top: 32px;
+  font-size: 21px;
+}
+
+.qualities {
+  display: grid;
+  gap: 22px;
+  margin: 24px 0 30px;
+}
+
+.quality {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.quality > span {
+  color: #a99cff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.quality h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.quality p {
+  margin: 0;
+  color: #a7adbd;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.about-button {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: #8975f5;
+  color: white;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.about-button:hover {
+  background: #7661e8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 750px) {
+  .about-section {
+    padding: 55px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-card {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #0b0f1a;
+  color: #f3f4f8;
+}
+
+.about-page {
+  background: #0b0f1a;
+  color: #f3f4f8;
+}

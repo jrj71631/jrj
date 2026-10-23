@@ -1,24 +1,17 @@
-
 <nav class="navbar">
-  <a href="#home" class="logo">
-    <span class="logo-icon">&lt;/&gt;</span>
-    Dev<span class="highlight">Portfolio</span>
+  <a class="logo" routerLink="/"> <span>&lt;/&gt;</span> JRJ </a>
+
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/skill" routerLinkActive="active">Skills</a>
+    <a routerLink="/project" routerLinkActive="active">Project</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </div>
+
+  <a class="hire-btn" routerLink="/contact">
+    Hire Me ↗
   </a>
-
-  <button class="menu-toggle" (click)="toggleMenu()"
-          [attr.aria-expanded]="isMenuOpen"
-          aria-label="Toggle navigation">
-    {{ isMenuOpen ? '✕' : '☰' }}
-  </button>
-
-  <ul class="nav-links" [class.active]="isMenuOpen">
-    <li><a href="#home" (click)="closeMenu()">Home</a></li>
-    <li><a href="#about" (click)="closeMenu()">About</a></li>
-    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
-    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
-    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
-  </ul>
-
-  <a href="#contact" class="hire-btn">Hire Me <span>↗</span></a>
 </nav>
-

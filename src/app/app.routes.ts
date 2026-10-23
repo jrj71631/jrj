@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
+import { Home } from './page/home/home';
+import { About } from './page/about/about';
+import { Contact } from './page/contact/contact';
+import { Project } from './page/project/project';
+import { Skill } from './page/skill/skill';
 
-export const routes: Routes = [];
-
-import { Component } from '@angular/core';
-import { NavbarComponent } from './navbar/navbar';
-import { Footer } from './footer/footer';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [NavbarComponent, Footer],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-})
-export class AppComponent {}
+export const routes: Routes = [
+  { path: '', component: Home },
+  { path: 'home', component: Home },
+  { path: 'about', component: About },
+  { path: 'contact', component: Contact },
+  { path: 'project', component: Project},
+  { path: 'skill', component: Skill },
+  { path: '**', redirectTo: '' }
+];

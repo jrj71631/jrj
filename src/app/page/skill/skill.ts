@@ -1,30 +1,18 @@
 import { Component } from '@angular/core';
 
-// @Component({
-//   imports: [],
-//   selector: 'app-skill',
-//   styleUrl: './skill.css',
-//   templateUrl: './skill.html',
-// })
-// export class Skill {}
-// import { Component } from '@angular/core';
-
 @Component({
-  selector: 'app-skills',
+  selector: 'app-skill',
   standalone: true,
-  imports: [],
   templateUrl: './skill.html',
   styleUrl: './skill.css'
 })
-export class SkillsComponent {
+export class Skill {
   skills = [
-    { name: 'HTML5', level: 90, category: 'Frontend' },
-    { name: 'CSS3', level: 85, category: 'Frontend' },
-    { name: 'JavaScript', level: 80, category: 'Frontend' },
-    { name: 'TypeScript', level: 80, category: 'Frontend' },
-    { name: 'Angular', level: 85, category: 'Framework' },
-    { name: 'Bootstrap', level: 75, category: 'Styling' },
-    { name: 'Git & GitHub', level: 70, category: 'Tools' },
-    { name: 'Responsive Design', level: 90, category: 'Design' }
+    { name: 'HTML5', category: 'Frontend', level: 90 },
+    { name: 'CSS3', category: 'Frontend', level: 85 },
+    { name: 'JavaScript', category: 'Programming', level: 75 },
+    { name: 'TypeScript', category: 'Programming', level: 70 },
+    { name: 'Angular', category: 'Framework', level: 70 },
+    { name: 'Responsive Design', category: 'Design', level: 85 }
   ];
 }

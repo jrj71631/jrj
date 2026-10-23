@@ -1,39 +1,92 @@
 
-<section class="skills-section" id="skills">
-  <div class="section-heading">
-    <p class="subtitle">MY EXPERTISE</p>
-    <h2>My <span>Skills</span></h2>
-    <p class="section-description">
-      Technologies and tools I use to build reliable,
-      responsive, and modern web applications.
+<section class="skills-section">
+  <div class="container">
+    <p class="eyebrow">WHAT I WORK WITH</p>
+
+    <h1>My <span>Skills</span></h1>
+
+    <p class="intro">
+      The technologies and tools I use to build modern, responsive,
+      and user-friendly web experiences.
     </p>
-  </div>
 
-  <div class="skills-grid">
-    @for (skill of skills; track skill.name) {
-      <div class="skill-card">
-        <div class="skill-top">
+    <div class="skills-layout">
+      <div class="skills-card">
+        <div class="card-heading">
           <div>
-            <h3>{{ skill.name }}</h3>
-            <p>{{ skill.category }}</p>
+            <p class="card-label">MY EXPERTISE</p>
+            <h2>Technical Skills</h2>
           </div>
-          <span class="percentage">{{ skill.level }}%</span>
+          <span class="heading-icon">⌘</span>
         </div>
 
-        <div
-          class="progress-track"
-          role="progressbar"
-          [attr.aria-label]="skill.name"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          [attr.aria-valuenow]="skill.level"
-        >
-          <div
-            class="progress-fill"
-            [style.width.%]="skill.level"
-          ></div>
-        </div>
+        @for (skill of skills; track skill.name) {
+          <div class="skill-item">
+            <div class="skill-info">
+              <div>
+                <h3>{{ skill.name }}</h3>
+                <span class="category">{{ skill.category }}</span>
+              </div>
+              <span class="percentage">{{ skill.level }}%</span>
+            </div>
+
+            <div
+              class="progress-track"
+              role="progressbar"
+              [attr.aria-label]="skill.name"
+              [attr.aria-valuenow]="skill.level"
+              aria-valuemin="0"
+              aria-valuemax="100">
+              <div
+                class="progress-fill"
+                [style.width.%]="skill.level">
+              </div>
+            </div>
+          </div>
+        }
       </div>
-    }
+
+      <div class="skills-sidebar">
+        <article class="info-card">
+          <div class="info-icon">✦</div>
+          <h2>Frontend Development</h2>
+          <p>
+            Building structured layouts and interactive interfaces with
+            HTML, CSS, JavaScript, TypeScript, and Angular.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">◈</div>
+          <h2>Responsive Design</h2>
+          <p>
+            Creating layouts that adapt to desktop, tablet, and mobile
+            screen sizes.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon">↗</div>
+          <h2>Continuous Learning</h2>
+          <p>
+            Improving my skills through practice, experimentation,
+            and building projects.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="bottom-banner">
+      <div>
+        <p class="card-label">ALWAYS GROWING</p>
+        <h2>Learning something new every day.</h2>
+      </div>
+      <span class="banner-symbol">✳</span>
+    </div>
+
+    <p class="disclaimer">
+      The skill percentages are examples. Update them to reflect your
+      actual experience.
+    </p>
   </div>
 </section>

@@ -1,38 +1,132 @@
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <p class="intro">HELLO, I'M</p>
+<main class="home-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
-    <h1>Your Name</h1>
+      <h1>
+        Hi, I'm <span class="highlight">Javed</span>
+        <br />
+        <span class="role">Angular Developer</span>
+      </h1>
 
-    <h2>I'm a <span>Frontend Developer</span></h2>
+      <p class="hero-description">
+        I build modern, responsive, and user-friendly web applications
+        using Angular, TypeScript, and modern web technologies.
+      </p>
 
-    <p class="description">
-      I create modern, responsive, and user-friendly
-      web applications using Angular, TypeScript,
-      HTML, and CSS.
+      <div class="hero-buttons">
+        <a routerLink="/project" class="btn btn-primary">
+          View My Projects
+        </a>
+
+        <a routerLink="/contact" class="btn btn-outline">
+          Contact Me
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <h3>01+</h3>
+          <p>Years Learning</p>
+        </div>
+
+        <div>
+          <h3>05+</h3>
+          <p>Projects Built</p>
+        </div>
+
+        <div>
+          <h3>100%</h3>
+          <p>Passion to Learn</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile-card">
+        <div class="profile-icon">&lt;/&gt;</div>
+        <h2>Developer</h2>
+        <p>Turning ideas into digital experiences.</p>
+
+        <div class="tech-tags">
+          <span>Angular</span>
+          <span>TypeScript</span>
+          <span>CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section about-section">
+    <p class="eyebrow">A LITTLE ABOUT ME</p>
+    <h2>Building useful things for the web.</h2>
+    <p class="section-description">
+      I'm a passionate developer who enjoys creating clean interfaces,
+      learning new technologies, and solving problems through code.
+      I focus on writing maintainable code and delivering great user
+      experiences.
+    </p>
+    <a routerLink="/about" class="text-link">More About Me →</a>
+  </section>
+
+  <!-- Skills Preview -->
+  <section class="section skills-section">
+    <p class="eyebrow">MY TOOLKIT</p>
+    <h2>Technologies I Work With</h2>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h3>Angular</h3>
+        <p>Building component-based web applications.</p>
+      </article>
+
+      <article class="skill-card">
+        <h3>TypeScript</h3>
+        <p>Writing structured and maintainable code.</p>
+      </article>
+
+      <article class="skill-card">
+        <h3>HTML & CSS</h3>
+        <p>Creating responsive and accessible interfaces.</p>
+      </article>
+
+      <article class="skill-card">
+        <h3>JavaScript</h3>
+        <p>Adding interactive features to websites.</p>
+      </article>
+    </div>
+
+    <a routerLink="/skill" class="text-link">Explore My Skills →</a>
+  </section>
+
+  <!-- Projects Preview -->
+  <section class="section projects-section">
+    <p class="eyebrow">SELECTED WORK</p>
+    <h2>Projects That Showcase My Skills</h2>
+    <p class="section-description">
+      I enjoy turning ideas into practical applications.
+      Explore my projects to see what I've been building.
     </p>
 
-    <div class="hero-buttons">
-      <a href="#skills" class="btn-primary">Explore My Skills</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
-    </div>
+    <a routerLink="/project" class="btn btn-primary">
+      Explore All Projects
+    </a>
+  </section>
 
-    <div class="social-links">
-      <a href="https://github.com/yourusername"
-         target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      <a href="https://linkedin.com/in/yourusername"
-         target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-    </div>
-  </div>
+  <!-- Contact CTA -->
+  <section class="contact-banner">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h2>Have an idea? Let's build something great.</h2>
+    <p>
+      I'm always interested in discussing projects, opportunities,
+      and new ideas.
+    </p>
 
-  <div class="hero-image">
-    <div class="image-frame">
-      <img
-        src="assets/profile.jpg"
-        alt="Profile photo"
-      />
-    </div>
-    <div class="floating-badge">Angular Developer</div>
-  </div>
-</section>
+    <a routerLink="/contact" class="btn btn-primary">
+      Get In Touch →
+    </a>
+  </section>
+</main>

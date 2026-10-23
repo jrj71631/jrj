@@ -1,1 +1,130 @@
-<p>contact works!</p>
+
+<section class="contact-section">
+  <div class="container">
+    <p class="eyebrow">LET'S CONNECT</p>
+
+    <h1>Get In <span>Touch</span></h1>
+
+    <p class="intro">
+      Have a project in mind, a question, or an opportunity?
+      I'd love to hear from you. Let's create something great together.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="info-label">CONTACT INFORMATION</p>
+        <h2>Let's start a conversation.</h2>
+
+        <p class="info-description">
+          Whether you want to discuss a project, collaborate on an idea,
+          or simply say hello, feel free to send me a message.
+        </p>
+
+        <div class="contact-detail">
+          <div class="detail-icon">✉</div>
+          <div>
+            <span>Email me</span>
+            <a href="mailto:">
+            jrj71631@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="detail-icon">◷</div>
+          <div>
+            <span>Response time</span>
+            <strong>Usually within a few days</strong>
+          </div>
+        </div>
+
+        <div class="social-area">
+          <p>LET'S CONNECT ONLINE</p>
+          <div class="social-links">
+            <a href="https://github.com/jrj71631" target="_blank"
+               rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://linkedin.com/" target="_blank"
+               rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="decoration decoration-one"></div>
+        <div class="decoration decoration-two"></div>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="sendMessage()"
+            #contactForm="ngForm">
+        <div class="form-heading">
+          <p class="info-label">SEND A MESSAGE</p>
+          <h2>Tell me about your idea.</h2>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              [(ngModel)]="name"
+              required
+              placeholder="John Doe">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              [(ngModel)]="email"
+              required
+              email
+              placeholder="john@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            [(ngModel)]="subject"
+            required
+            placeholder="What would you like to discuss?">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            [(ngModel)]="message"
+            required
+            minlength="10"
+            rows="5"
+            placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button
+          class="submit-button"
+          type="submit"
+          [disabled]="contactForm.invalid">
+          Send Message <span>↗</span>
+        </button>
+
+        <p class="form-note">
+          Your default email application will open with your message prepared.
+        </p>
+
+        @if (submitted) {
+          <p class="success-message">
+            Your email application should have opened. Send the email there
+            to complete your message.
+          </p>
+        }
+      </form>
+    </div>
+  </div>
+</section>

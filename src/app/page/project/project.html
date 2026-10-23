@@ -1,1 +1,66 @@
-<p>project works!</p>
+<section class="projects-page">
+  <div class="projects-container">
+
+    <div class="section-heading">
+      <p class="eyebrow">MY RECENT WORK</p>
+      <h1>My <span>Projects</span></h1>
+      <p class="section-description">
+        Here are some projects that showcase my skills and passion
+        for building useful, modern web experiences.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of project; track project.number) {
+        <article class="project-card">
+
+          <div class="project-top">
+            <span class="project-number">{{ project.number }}</span>
+            <span class="project-category">{{ project.category }}</span>
+          </div>
+
+          <div class="project-icon">&lt;/&gt;</div>
+
+          <h2>{{ project.title }}</h2>
+          <p class="project-description">{{ project.description }}</p>
+
+          <div class="technologies">
+            @for (tech of project.technologies; track tech) {
+              <span>{{ tech }}</span>
+            }
+          </div>
+
+          <div class="project-actions">
+            @if (project.demo) {
+              <a [href]="project.demo" target="_blank"
+                 rel="noopener noreferrer">
+                Live Demo ↗
+              </a>
+            }
+
+            @if (project.github) {
+              <a [href]="project.github" target="_blank"
+                 rel="noopener noreferrer">
+                GitHub ↗
+              </a>
+            }
+
+            @if (!project.demo && !project.github) {
+              <span class="coming-soon">Add your project links</span>
+            }
+          </div>
+
+        </article>
+      }
+    </div>
+
+    <div class="projects-cta">
+      <h2>Have a project in mind?</h2>
+      <p>Let's work together and turn your idea into reality.</p>
+      <a routerLink="/contact" class="contact-button">
+        Contact Me <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
