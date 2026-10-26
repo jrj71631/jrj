@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
-
-@Component({
-  imports: [],
-  selector: 'app-footer',
-  styleUrl: './footer.css',
-  templateUrl: './footer.html',
-})
-export class Footer {}
-
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   templateUrl: './footer.html',
-  styleUrl: './footer.css'
+  styleUrl: './footer.css',
+  imports: [RouterLink, RouterLinkActive]
 })
-export class FooterComponent {
+export class Footer {
   currentYear = new Date().getFullYear();
 }
