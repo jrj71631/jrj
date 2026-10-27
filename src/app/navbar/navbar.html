@@ -1,17 +1,61 @@
+
 <nav class="navbar">
-  <a class="logo" routerLink="/"> <span>&lt;/&gt;</span> JRJ </a>
+  <a class="logo" routerLink="/" (click)="closeMenu()">
+    <span class="logo-icon">&lt;/&gt;</span> JRJ
+  </a>
 
-  <div class="nav-links">
-    <a routerLink="/" routerLinkActive="active"
-       [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <button
+    class="menu-toggle"
+    type="button"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen"
+    aria-label="Toggle navigation menu"
+  >
+    {{ menuOpen ? '✕' : '☰' }}
+  </button>
 
-    <a routerLink="/about" routerLinkActive="active">About</a>
-    <a routerLink="/skill" routerLinkActive="active">Skills</a>
-    <a routerLink="/project" routerLinkActive="active">Project</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <div class="nav-links" [class.active]="menuOpen">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()"
+    >Home</a>
+
+    <a
+      routerLink="/about"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >About</a>
+
+    <a
+      routerLink="/skill"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >Skills</a>
+
+    <a
+      routerLink="/project"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >Project</a>
+
+    <a
+      routerLink="/contact"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >Contact</a>
+
+    <a
+      class="hire-btn mobile-hire"
+      routerLink="/contact"
+      (click)="closeMenu()"
+    >
+      Hire Me ↗
+    </a>
   </div>
 
-  <a class="hire-btn" routerLink="/contact">
+  <a class="hire-btn desktop-hire" routerLink="/contact">
     Hire Me ↗
   </a>
 </nav>
